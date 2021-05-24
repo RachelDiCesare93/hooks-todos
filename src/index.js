@@ -1,13 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+export const UserContext = React.createContext()
+
+const username = "Rachel"
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <UserContext.Provider value={username}>
+        <App />
+      </UserContext.Provider>
+    </React.StrictMode>,
   document.getElementById('root')
 );
 
